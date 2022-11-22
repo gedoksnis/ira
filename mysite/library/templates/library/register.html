@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container register">
+    <h3>Registracija</h3>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-danger" role="alert">
+        {{message}}
+    </div>
+    {% endfor %}
+    {% endif %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="username">Vartotojo vardas</label>
+            <input name="username" type="text" class="form-control" id="username">
+            <small class="form-text text-muted">Iki 100 simbolių.</small>
+        </div>
+        <div class="form-group">
+            <label for="email">El. paštas </label>
+            <input name="email" type="email" class="form-control" id="email">
+            <small class="form-text text-muted">Nesiųsime jokio spamo, reikalingas tik slaptažodžiui išsiųsti.</small>
+        </div>
+        <div class="form-group">
+            <label for="password"> Slaptažodis</label>
+            <input name="password" type="password" class="form-control" id="password">
+            <small class="form-text text-muted">Netrumpesnis nei 8 simboliai, negali būti vien skaičiai.</small>
+        </div>
+        <div class="form-group">
+            <label for="password2">Pakartokite slaptažodį</label>
+            <input name="password2" type="password" class="form-control" id="password2">
+        </div>
+        <button type="submit" class="btn btn-secondary btn-register">Registruotis</button>
+    </form>
+    <p>Jei esate užsiregistravęs anskčiau <a href="{% url 'login' %}">Prisijunkite</a></p>
+</div>
+
+{% endblock %}

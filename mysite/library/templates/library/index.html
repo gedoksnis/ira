@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %}
+Welcome to Library!
+{% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'library/index.css'%}">
+{% endblock %}
+
+{% block content %}
+<h1>{% trans "Local Library" %}</h1>
+<h4>{% trans "In library we have:" %}</h4>
+<ul>
+    <li><strong>{% trans "Books:" %}</strong> {{num_books }}</li>
+    <li><strong>{% trans "Book Copies:" %}</strong> {{ num_instances }}</li>
+    <li><strong>{% trans "Now Available:" %}</strong> {{ num_instances_available }}</li>
+    <li><strong>{% trans "Authors:" %} </strong> {{ num_authors }}</li>
+</ul>
+{% comment 'pavyzdys' %}
+
+{% endcomment %}
+
+<p>{% trans "Your visits:" %} {{num_visits }}</p>
+
+{# vienos eilutės pavyzdys #}
+{% endblock %}

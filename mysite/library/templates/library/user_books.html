@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Mano knygos
+{% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'library/user_books.css'%}">
+{% endblock %}
+
+{% block content %}
+<h3>Mano knygos</h3>
+
+{% if mybooks %}
+<ul>
+    {% for bookinst in mybooks %}
+    {#<img class="rounded-circle" src="{{bookinst.reader.profilis.nuotrauka.url }}">#}
+    <li><strong>Pavadinimas: </strong>{{bookinst.book.title}}</li>
+    <li><strong class="{% if bookinst.is_overdue %} text-danger {% endif %}">Grąžinimo terminas: {{bookinst.due_back}}</strong></li>
+    <a class="btn btn-primary" href="{{ bookinst.id}}" role="button">Peržiūrėti</a>
+    <br><br>
+    {% endfor %}
+</ul>
+{% else %}
+<p>Šiuo metu jūs nesate pasiskolinęs knygų.</p>
+{% endif %}
+
+{% endblock %}

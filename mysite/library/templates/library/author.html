@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'library/author.css'%}">
+{% endblock %}
+
+{% block content %}
+<div>
+    <h4>{{author.first_name}} {{author.last_name}}</h4>
+    <p>{{author.description | safe}}</p>
+    <h5>Bibliotekoje turime šias autoriaus knygas:</h5>
+    <ul>
+    {% for book in author.books.all %}
+        <li>{{book.title}}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

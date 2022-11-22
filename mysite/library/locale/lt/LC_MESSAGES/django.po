@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-15 21:12+0200\n"
+"PO-Revision-Date: 2022-11-15 21:11+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < "
+"11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? "
+"1 : n % 1 != 0 ? 2: 3);\n"
+"X-Generator: Poedit 3.2\n"
+
+#: .\library\models.py:24
+msgid "Title"
+msgstr "Pavadinimas"
+
+#: .\library\models.py:26
+msgid "Summary"
+msgstr "Santrauka"
+
+#: .\library\models.py:26
+msgid "A short book description"
+msgstr "Trumpas knygos aprašymas"
+
+#: .\library\models.py:27
+msgid "A unique 13 digits ISBN number"
+msgstr "Unikalus 13 skaitmenų ISBN numeris"
+
+#: .\library\models.py:28
+msgid "Please select book's genre(s)"
+msgstr "Pasirinkite knygos žanrą (-us)"
+
+#: .\library\models.py:29
+msgid "Cover"
+msgstr "Viršelis"
+
+#: .\library\templates\library\index.html:13
+msgid "Local Library"
+msgstr "Miesto biblioteka"
+
+#: .\library\templates\library\index.html:14
+msgid "In library we have:"
+msgstr "Bibliotekoje turime:"
+
+#: .\library\templates\library\index.html:16
+msgid "Books:"
+msgstr "Knygos:"
+
+#: .\library\templates\library\index.html:17
+msgid "Book Copies:"
+msgstr "Knygų kopijos:"
+
+#: .\library\templates\library\index.html:18
+msgid "Now Available:"
+msgstr "Laisvos knygos:"
+
+#: .\library\templates\library\index.html:19
+msgid "Authors:"
+msgstr "Autoriai:"
+
+#: .\library\templates\library\index.html:25
+msgid "Your visits:"
+msgstr "Jūsų apsilankymai:"
+
+#: .\library\views.py:124
+#, python-format
+msgid "Username %s already exists!"
+msgstr "Vartotojas %s jau egzistuoja!"
+
+#: .\library\views.py:128
+#, python-format
+msgid "Username with %s already exists!"
+msgstr "Vartotojas su %s jau egzistuoja!"
+
+#: .\library\views.py:134
+msgid "Passwords do no match!"
+msgstr "Slaptažodžiai nesutampa!"
